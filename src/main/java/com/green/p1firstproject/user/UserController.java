@@ -1,6 +1,7 @@
 package com.green.p1firstproject.user;
 
 import com.green.p1firstproject.user.model.*;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
@@ -14,6 +15,7 @@ public class UserController {
     private final UserService service;
 
     @PostMapping("sign-up")
+    @Operation(description = "dkadfnajdnfjdanfjnqjnkjndnaknreja")
     public int signUpUser(@ParameterObject @ModelAttribute SignUpReq p){
         log.info("{}", p);
         return service.signUpUser(p);
